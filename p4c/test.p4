@@ -91,7 +91,7 @@ control L2Pipe(inout Hdr hdr, inout Meta meta,
         standard_metadata.egress_port = port;
     }
 
-    @dpdk_implementation("cuckoo_hash")
+    @dpdk_implementation(cuckoo_hash)
     table dmac {
         key = {
             hdr.ethernet.dst_addr: exact;
